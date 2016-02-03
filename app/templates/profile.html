@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Profile Page{% endblock %}
+
+{% block js %}
+{% endblock %}
+  {% block css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+ {% endblock %}
+
+{% block main %}
+<div class="profile">
+<div id="name"><h2>Omaire Morgan</h2></div>
+<img src="/static/img/profilepic.jpg"></img>
+<div id="date"><h3>Today's is {{timereal}}</h3></div>
+<div class="details"><p>Username:jblizz11</p>
+<p>ID: 6200531672729992323</p>
+<p>Sex: Male</p>
+<p>Age:10</p>
+<p>Highest Score:120</p>
+<p>TDollars:200</p></div>
+</div>
+{% endblock %}
