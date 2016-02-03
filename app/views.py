@@ -5,9 +5,9 @@ Werkzeug Documentation:  http://werkzeug.pocoo.org/documentation/
 
 This file creates your application.
 """
-
+import time
 from app import app
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for,jsonify
 
 
 ###
@@ -24,6 +24,13 @@ def home():
 def about():
     """Render the website's about page."""
     return render_template('about.html')
+
+@app.route('/profile/')
+def profile():
+    
+    """Render the website's profile page and also get the current date."""
+    result= time.strftime("%a, %d %b %Y ");
+    return render_template('profile.html',timereal=result)
 
 
 ###
